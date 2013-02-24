@@ -5,22 +5,22 @@ Bubble Sort Visualization
 How it works!
 ------------
 
-from google.appengine.ext import webapp
-from google.appengine.ext.webapp import util
-from google.appengine.ext.webapp import template
+    from google.appengine.ext import webapp
+    from google.appengine.ext.webapp import util
+    from google.appengine.ext.webapp import template
 
-class MainHandler(webapp.RequestHandler):
-    def get(self):
-       self.response.out.write(template.render('bubblesort.html',''))
+    class MainHandler(webapp.RequestHandler):
+       def get(self):
+           self.response.out.write(template.render('bubblesort.html',''))
 
 
-def main():
-    application = webapp.WSGIApplication([('/', MainHandler)],
+    def main():
+           application = webapp.WSGIApplication([('/', MainHandler)],
                                      debug=True)
-    util.run_wsgi_app(application)
+           util.run_wsgi_app(application)
 
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+           main()
 
 
